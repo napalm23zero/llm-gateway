@@ -1,0 +1,10 @@
+# Just for the workspace all the other stuff runs in containers
+services:
+  workspace:
+    build:
+      context: ../.devcontainer
+      dockerfile: Dockerfile
+    volumes:
+      - ..:/workspace:cached
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: sleep infinity

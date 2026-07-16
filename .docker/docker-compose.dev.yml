@@ -1,0 +1,8 @@
+# Dev overlay: hot-reload, source bind mount, published port.
+services:
+  gateway:
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    volumes:
+      - ../services/gateway/app:/code/app
+    ports:
+      - "8000:8000"

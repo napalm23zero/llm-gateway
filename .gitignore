@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Env and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# Editors
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Build and coverage
+dist/
+build/
+.coverage
+htmlcov/
+
+PLAN.md
+STUDY_NOTES.md

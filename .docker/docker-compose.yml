@@ -1,0 +1,14 @@
+# Explicit project name so every composition (and the devcontainer CLI, which
+# reads it from `compose config`) namespaces containers/volumes predictably as
+# llm-gateway-*, instead of the folder-derived `docker`.
+name: llm-gateway
+
+include:
+  - ../services/gateway/.docker/docker-compose.yml
+
+# One explicitly-named network shared by every composition (dev, test,
+# devcontainer) instead of the auto-generated <project>_default.
+# ponytail: rename the default net so all services land on it with no per-service attach.
+networks:
+  default:
+    name: vader-network

@@ -1,0 +1,6 @@
+# Test overlay: run a service's test suite in its container against the production-shaped base image.
+services:
+  gateway:
+    command: pytest -q
+    volumes:
+      - ../services/gateway:/code
